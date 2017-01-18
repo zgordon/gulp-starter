@@ -15,6 +15,14 @@ Also, make sure you have gulp installed globally as well.  This will let you run
 npm i -g gulp
 ```
 
+Once this is done you can kick of the server and watch commands with the following in the command line.
+
+```
+npm start
+```
+
+Likewise you can also call "gulp" directly to kick off the same default task that npm start does.
+
 ## Packages Included
 
 This starter file includes the following Gulp plugins:
