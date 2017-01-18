@@ -1,0 +1,47 @@
+#view {
+  background: $view-background-color;
+  padding: 40px 20px;
+
+  &.inactive a {
+    cursor: not-allowed;
+  }
+  .container {
+    // padding: 20px;
+    margin: 20px auto 0;
+    max-width: 960px;
+    //max-width: 1280px;
+
+    .page-header {
+      text-align: center;
+    }
+
+    .content {
+      background: #fff;
+      padding: 10px 20px;
+      border: 1px #ddd solid;
+      .primary {
+        width: calc(100% - 20px);
+        padding: 10px;
+        #blogPosts {
+          padding-top: 20px;
+          article {
+            margin: 10px 0 0;
+            border-top: 1px#ededed solid;
+            padding: 5px 0 10px;
+            h3 {
+              font-size: 1.2rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      .sidebar {
+
+        width: calc(100% - 20px);
+        padding: 10px;
+      }
+    }
+  }
+}

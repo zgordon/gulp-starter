@@ -1,0 +1,35 @@
+{
+  "name": "gulp-setup",
+  "version": "1.1.0",
+  "description": "Gulp configuration for concatenating, minifying, adding sourcemaps, error linting, plumber and SASS with auto loading of all plugins",
+  "author": "@zgordon",
+  "scripts": {
+    "start": "gulp"
+  },
+  "eslintConfig": {
+    "eslintConfig": {
+      "env": {
+        "no-unused-vars": [
+          "error",
+          {
+            "vars": "all"
+          }
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.13.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.3.1",
+    "gulp-uglify": "^2.0.0"
+  }
+}

@@ -1,0 +1,119 @@
+@import "wysiwyg";
+
+#edit {
+  label {
+    padding: 10px 10px 0;
+    display: block;
+    color: $editor-light-link;
+    font-weight: lighter;
+  }
+  input,
+  button,
+  textarea,
+  .CodeMirror,
+  iframe.wysiwyg {
+    display: block;
+    color: $editor-dark-link;
+    font-size: 1.4rem;
+    // font-weight: lighter;
+    font-family: $editor-form-fonts;
+    width: calc(100% - 20px);
+    margin: 5px 10px 10px;
+    padding: 10px;
+    border: 1px $editor-border-color solid;
+    &:focus {
+      border-color: $editor-dark-link;
+    }
+    &:read-only {
+      color: #ccc;
+    }
+  }
+  textarea, .CodeMirror, .CodeMirror-scroll, iframe.wysiwyg  {
+    min-height: 300px;
+    max-height: 400px;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    padding: 5px;
+  }
+  iframe.wysiwyg {
+    margin-left: 10px;
+    width: 93%;
+    padding: 0;
+    /* margin: 0; */
+    border: 1px #ccc solid;
+  }
+  #editUpdateBtn {
+    background: $primary-btn-color;
+    color: #fff;
+    font-weight: lighter;
+    position: relative;
+  }
+  #deletePost {
+    margin-left: 10px;
+    font-size: .8rem;
+    a {
+      color: $editor-light-link;
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+}
+
+.loader:before,
+.loader:after,
+.loader {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #ffffff;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #ffffff;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #ffffff;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #ffffff;
+  }
+}

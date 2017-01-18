@@ -1,0 +1,228 @@
+#editor {
+
+  ul {
+    padding: 0;
+    li {
+      list-style-position: inside;
+    }
+  }
+
+  nav {
+    display: none;
+    margin: -20px;
+    background: #fff;
+    color: $editor-dark-link;
+    background-color: #fff;
+    border-top: 1px solid $editor-border-color;
+    border-bottom: 1px solid $editor-border-color;
+    position: relative;
+
+    &.active {
+      display: block;
+    }
+
+    #addNew {
+      position: absolute;
+      top: 42px;
+      right: 14px;
+      a {
+          text-decoration: none;
+          padding: 0px 6px;
+          display: block;
+          background: $nav-link-color-hover;
+          border-radius: 50%;
+          font-size: 1rem;
+          color: #fff;
+          font-weight: bold;
+          &:hover {
+
+          }
+          &.hidden {
+            display: none;
+          }
+      }
+    }
+
+    h3 {
+      padding: 20px;
+      text-transform: capitalize;
+
+      a {
+        color: $editor-dark-link;
+        // text-decoration: none;
+        // background: $editor-background-color-hover;
+        // border: $editor-border-color;
+        // padding: 5px;
+        // border-radius: 3px;
+        &:hover {
+          //background: $editor-background-color;
+        }
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+
+        &:first-child {
+          border-top: 1px solid $editor-border-color;
+        }
+
+        > a {
+          padding: 15px 20px;
+          display: block;
+          border-bottom: 1px solid $editor-border-color;
+          color: $editor-dark-link;
+          text-decoration: none;
+          position: relative;
+          &:hover {
+            background: $editor-background-color-hover;
+            color: $editor-hover-link;
+            &:after {
+              color: $editor-hover-link;
+            }
+          }
+          &:after {
+            content: ">";
+            position: absolute;
+            right: 20px;
+            color: #a0a5aa;
+          }
+        }
+      }
+    }
+  }
+}
+
+#view {
+
+  #mainNav {
+    margin: 10px;
+    font-family: $view-header-secondary;
+    margin: 40px 0 20px;    
+
+    ul {
+      padding:0;
+      margin:0;
+      text-align: center;
+      li {
+        display: inline-block;
+        list-style: none;
+        padding: 0 0 0 5px;
+        margin: 0;
+        font-size: 1.4rem;
+        a {
+          color: $nav-link-color;
+          padding: 10px;
+          text-decoration: none;
+          &:hover {
+            color: $nav-link-color-hover;
+          }
+        }
+      }
+    }
+  }
+  #menuIcon {
+    display: none;
+    background: #000;
+    width: 100%;
+    text-align: center;
+    &:hover {
+      background: #999;
+    }
+    a {
+      width: 100%;
+      display: inline-block;
+      color: #fff;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #view {
+    #MainNav {
+      max-height: 0;
+      overflow: hidden;
+      float: none;
+      text-align: center;
+      width: 100%;
+      @include transition(max-height 0.5s);
+      &.menuOpen {
+        max-height: 1000px;
+        @include transition(max-height 0.5s);
+      }
+      ul {
+        li {
+          display: block;
+          width: 100%;
+          background: #000;
+          border-top:1px solid #4d4d4d;
+          &:hover {
+            background: #999;
+          }
+          a {
+            color: #fff;
+            text-shadow: #848484 0px 1px 2px;
+            padding: 10px 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+    #menuIcon {
+      display: inline-block;
+    }
+  }
+}
+
+#editorToggle {
+  position: absolute;
+  bottom: 5px;
+  left: 25px;
+  a {
+    color: $primary-btn-color;
+    .arrow {
+      // width: 0;
+      // height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid transparent;
+      border-right: 8px solid $primary-btn-color;
+      display: block;
+      left: -25px;
+      position: absolute;
+    }
+    &:hover label {
+      cursor: pointer;
+    }
+  }
+  &.hidden {
+    a {
+      background: $primary-btn-color;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      position: absolute;
+      padding: 10px;
+      bottom: 0px;
+      left: -20px;
+      .arrow {
+        border-right: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid #fff;
+        left: 40%;
+        bottom: 5px;
+      }
+      label {
+        display: none;
+      }
+    }
+  }
+}
